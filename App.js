@@ -38,16 +38,16 @@ const Header = () => {
     )
 };
 
-const RestaurantCard = () => {
+const RestaurantCard = ({resName,cuisine}) => {
     return (
         <div className='res-card' style={{backgroundColor:"#f0f0f0"}}>
             <img 
             className='res-logo'
             alt='res-logo'
-            src="https://content3.jdmagicbox.com/comp/bangalore/b2/080pxx80.xx80.200929223605.l8b2/catalogue/meghana-foods-rajajinagar-1st-block-bangalore-biryani-delivery-restaurants-03vi3yr0hq.jpg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqAJLJSaIRdCsHpsKrPM-bnLUgcnSdTFRn2w&usqp=CAU"
             />
-            <h3>Meghana Foods</h3>
-            <h4>Biriyani, North Indian,Asian</h4>
+            <h3>{resName}</h3>
+            <h4>{cuisine}</h4>
             <h4>4.3</h4>
             <h4>38 minutes</h4>
         </div>
@@ -59,14 +59,8 @@ const Body = () => {
         <div className='body'>
             <div className='search'>Search</div>
             <div className='res-container'>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-
+                <RestaurantCard resName="Meghana Foods" cuisine="Biriyani, North Indian,Asian"/>
+                <RestaurantCard resName="KFC" cuisine="Burger, FastFood"/>
             </div>
         </div>
     )
